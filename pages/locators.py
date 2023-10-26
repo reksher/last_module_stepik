@@ -1,11 +1,16 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators():
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+
+
+class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
 
 
-class LoginPageLocators():
+class LoginPageLocators:
     email_reg = (By.CSS_SELECTOR, '[id="id_registration-email"]')
     password1_reg = (By.CSS_SELECTOR, '[id="id_registration-password1"]')
     password2_reg = (By.CSS_SELECTOR, '[id="id_registration-password2"]')
@@ -15,7 +20,7 @@ class LoginPageLocators():
     button_log = (By.CSS_SELECTOR, '[name="login_submit"]')
 
 
-class PromoPageLocators():
+class PromoPageLocators:
     ADD_TO_BASKET = (By.CSS_SELECTOR, '.btn-add-to-basket')
     NOTIFICATION_OF_ADD = (By.CSS_SELECTOR, 'div.alert:first-child .alertinner')
     NOTIFICATION_OF_ADD_NAME_BOOK = (By.CSS_SELECTOR, 'div.alert:first-child strong')
