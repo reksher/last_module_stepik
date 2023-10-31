@@ -1,5 +1,5 @@
 from pages.base_page import BasePage
-from pages.locators import PromoPageLocators
+from pages.locators import PromoPageLocators, MainPageLocators
 
 
 class PromoPage(BasePage):
@@ -52,3 +52,5 @@ class PromoPage(BasePage):
         add_basket = self.browser.find_element(*PromoPageLocators.ADD_TO_BASKET)
         add_basket.click()
         self.should_not_be_success_message()
+
+

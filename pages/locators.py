@@ -8,6 +8,7 @@ class BasePageLocators:
 
 class MainPageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    BASKET_MINI = (By.CSS_SELECTOR, ".btn-group a.btn-default")
 
 
 class LoginPageLocators:
@@ -28,3 +29,9 @@ class PromoPageLocators:
     NOTIFICATION_PRICE = (By.CSS_SELECTOR, 'div.alert:last-child .alertinner p:first-of-type')
     NOTIFICATION_PRICE_IN_BASKET = (By.CSS_SELECTOR, 'div.alert:last-child strong')
     PRICE_BOOK = (By.CSS_SELECTOR, '.col-sm-6 .price_color')
+
+
+class BasketLocators:
+    EMPTY_BASKET = (By.CSS_SELECTOR, '#content_inner > p:first-of-type')
+    PRODUCT_IN_THE_BASKET = (By.CSS_SELECTOR, '.basket-title .row h2')
+
